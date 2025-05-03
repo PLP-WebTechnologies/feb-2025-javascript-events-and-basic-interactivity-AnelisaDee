@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Registration</title>
+  </head>
+  <body>
+    <header>
+      <h1>🎓 Student Registration Portal</h1>
+    </header>
+    <nav>
+      <button class="tab" onclick="switchTab('form')">Register</button>
+      <button class="tab" onclick="switchTab('gallery')">Gallery</button>
+    </nav>
+    <section id="formSection" class="tab-content">
+      <form id="registrationForm">
+        <label>Full Name:</label>
+        <input type="text" id="name" required />
+
+        <label>Email:</label>
+        <input type="email" id="email" required />
+
+        <label>Password:</label>
+        <input type="password" id="password" required />
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" required />
+
+        <button type="submit" id="registerBtn">Register</button>
+      </form>
+      <p id="feedback"></p>
+    </section>
+    <section id="gallerySection" class="tab-content hidden">
+      <div class="slideshow">
+        <img
+          id="slideImage"
+          src="https://via.placeholder.com/300?text=Image+1"
+          alt="Slideshow"
+        />
+        <div>
+          <button onclick="prevImage()">Prev</button>
+          <button onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </section>
+    <footer ondblclick="showSecret()">Double-click here for a secret 👀</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
